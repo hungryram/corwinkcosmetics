@@ -1,0 +1,77 @@
+{{ $navbarBlack := .Site.Data.design.colors.enable_black_menu_items }}
+{{ $contact := .Site.Data.profile.primary_contact }}
+{{/*  <div class="top-bar">
+    <div class="container">
+        <p><a href="mailto:{{ $contact.email }}">{{ $contact.email }}</a></p>
+    </div>
+</div>  */}}
+<nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+<div class="container">
+    <div class="navbar-brand">
+        <a class="navbar-item has-text-centered" href="{{ .Site.BaseURL }}">
+            {{ with .Site.Data.design.logo_and_title.logo}}
+        <img src="{{ . }}" alt="{{ $.Site.Data.profile.company_name }}" style="margin: 0 auto">
+            {{ else }}
+        <h1>{{ .Site.Data.design.logo_and_title.company_title }}</h1>
+            {{ end }}
+      </a>
+  
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+        {{ if .HasChildren }}
+            <div class="navbar-item has-dropdown is-hoverable main-drop">
+                <a class="navbar-link{{ if $navbarBlack }} has-text-black{{ else }} has-text-white{{ end }}" href="javascript:;">
+                    {{ .Name }}
+                </a>
+                <!-- First Level Dropdown -->
+                    <div class="navbar-dropdown">
+                        {{ range .Children }}
+                            
+                            <a class="navbar-item {{ if .HasChildren }}navbar-link first-drop is-hoverable{{ end }}{{ if $navbarBlack }} has-text-black{{ else }} has-text-white{{ end }}" href="{{ if .HasChildren }}javascript:;{{ else }}{{ .URL }}{{ end }}">
+                            {{ .Name }}
+                            </a>
+                        
+                        {{ end }}
+                  </div>
+                  <!-- End first level Dropdown -->
+            </div>
+            {{ else }} <!-- Else No Drop Down-->
+            <a href="{{ .URL |absURL }}" class="navbar-item{{ if $navbarBlack }} has-text-black{{ else }} has-text-white{{ end }}">{{ .Name }}</a>
+        {{ end }}
+        {{ end }} <!-- End range menu -->
+      </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button snipcart-customer-signin">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="52" height="52" viewBox="0 0 24 24" stroke-width="0.5" stroke="#C90F19" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="12" cy="7" r="4" />
+                    <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                  </svg>
+            </a>
+            <a class="button">
+                <span class="snipcart-items-count ml-3 has-text-black"></span> / <span class="snipcart-total-price"></span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="9" cy="19" r="2" />
+                    <circle cx="17" cy="19" r="2" />
+                    <path d="M3 3h2l2 12a3 3 0 0 0 3 2h7a3 3 0 0 0 3 -2l1 -7h-15.2" />
+                  </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</nav>
