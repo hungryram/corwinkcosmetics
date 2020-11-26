@@ -1,0 +1,101 @@
+{{ define "main" }}
+
+<div class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-half">
+                <h2 class="title is-4">I'd love your feedback on the products!</h2>
+                <p>I appreciate your support and would love your feedback on how the product and shipping can be improved.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-half">
+                <form name="feedback" method="POST" netlify-honeypot="bot-field" data-netlify="true" action="/thank-you">
+                    <input type="hidden" name="subject" value="feedback form">
+                    <input name="bot-field" type="hidden">
+                <div class="field">
+                    <label class="label">Your Email</label>
+                    <div class="control">
+                      <input class="input" type="email" placeholder="Email" name="email" required>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="field">
+                    <label class="label">What product did you purchase?</label>
+                    <div class="control">
+                      <input class="input" type="text" placeholder="Name of products" name="What product did you purchase">
+                    </div>
+                  </div>
+                  <br>
+                  <div class="field">
+                    <label class="label">Would you recommend this to anyone?</label>
+                    <div class="control">
+                        <label class="radio">
+                          <input type="radio" name="Would you recommend this to anyone" value="yes">
+                          Yes
+                        </label>
+                        <label class="radio">
+                          <input type="radio" name="Would you recommend this to anyone" value="no">
+                          No
+                        </label>
+                      </div>
+                  </div>
+                  <br>
+
+                  <br>
+                  <div class="field">
+                    <label class="label">What can I do to help improve these products?</label>
+                    <div class="control">
+                        <textarea class="textarea" placeholder="Help improve the product" name="If yes, what did you like? If no, what didn't you like"></textarea>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="field">
+                    <label class="label">How was your experience recieving the packaging and product?</label>
+                    <div class="control">
+                        <textarea class="textarea" placeholder="Was package damaged when received etc." name="How was your experience recieving the packaging and product"></textarea>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="field">
+                    <label class="label">How would you rate your overall experience with the product?</label>
+                    <div class="control">
+                        <label class="radio">
+                          <input type="radio" name="How would you rate your overall experience with the product" value="Not good">
+                          Not good
+                        </label>
+                        <label class="radio">
+                          <input type="radio" name="How would you rate your overall experience with the product" value="Average">
+                          average
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="How would you rate your overall experience with the product" value="Very good">
+                            Very good
+                          </label>
+                          <label class="radio">
+                            <input type="radio" name="How would you rate your overall experience with the product" value="Excellent">
+                            Excellent
+                          </label>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="field">
+                    <label class="label">Additional Comments</label>
+                    <div class="control">
+                      <textarea class="textarea" placeholder="Add additional comments and review" name="additional comments"></textarea>
+                    </div>
+                  </div>
+                  <br>
+                      <button class="button">Submit</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ end }}

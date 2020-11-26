@@ -1,0 +1,24 @@
+---
+product_page:
+  heading: SHOP NOW
+  body_text: Your items are waiting for you. Happy Shopping!
+  search_engine_optimization:
+    title_tag: Shop Eyelash and Liners | Corwink Cosmetics
+    meta_description: View all our products
+faq_page:
+  search_engine_optimization:
+    title_tag: FAQ | Corwink Cosmetics
+    meta_description: Need answers? Corwink Cosmetics will answer any question you
+      have.
+contact_page:
+  search_engine_optimization:
+    meta_description: contact us and we'll get in touch shortly.
+    title_tag: Contact Corwink Cosmetics
+  heading: Get in Touch
+  body_text: If you have any questions, feel free to contact us. We respond quick!
+blog_page:
+  heading: View Our Latest News
+  body_text: Keep up with our latest blog posts
+  search_engine_optimization:
+    title_tag: Blog with Corwink Cosmetics
+    meta_description: View a list of our blog posts at Corwink Cosmetics

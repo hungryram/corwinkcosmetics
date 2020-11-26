@@ -1,0 +1,25 @@
+---
+label: Custom Page
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: url
+  type: text
+  config:
+    required: false
+  label: URL
+  description: This is generated automatically. Only change it when you need to.
+- name: search_engine_optimization
+  type: include
+  config: {}
+  template: seo
+  label: Search Engine Optimization
+pages:
+- content/accessibility.md
+- content/returns-exchanges.md
+- content/shipping-cancelations.md
+- content/terms-conditions.md

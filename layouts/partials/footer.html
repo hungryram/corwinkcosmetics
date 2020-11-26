@@ -1,0 +1,222 @@
+
+<footer style="{{ safeHTMLAttr (printf "background-color: %s" .Site.Data.design.footer.footer_background_color) }}">
+   <div class="section">
+     <div class="container">
+       <div class="columns">
+         <div class="column">
+           <img src="{{ .Site.Data.design.footer.footer_logo }}" alt="{{ .Site.Data.profile.company_name }}" width="200">
+           <p {{ if .Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:white"{{end}}>{{ .Site.Data.design.footer.footer_bio }}</p>
+         </div>
+         <div class="column">
+           {{ $footerContact := .Site.Data.profile.primary_contact }}
+           <h2 class="subtitle is-6" {{ if .Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:white"{{end}}>Contact</h2>
+           {{ if gt ( len $footerContact.street_address ) 0 }}<p {{ if .Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:white"{{end}}>{{ $footerContact.street_address }} {{ $footerContact.city }}, {{ $footerContact.state }} {{ $footerContact.zip_code }}</p>{{ end }}
+           {{ if $footerContact.phone }}<p {{ if .Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:white"{{end}}>Phone: {{ $footerContact.phone }}</p>{{ end }}
+           {{ if $footerContact.email }}<p {{ if .Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:white"{{end}}>Email: {{ $footerContact.email }}</p>{{ end }}
+         </div>
+         <div class="column">
+          <h2 class="subtitle is-6" {{ if .Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:white"{{end}}>Connect</h2>
+          {{ $footerSocial := .Site.Data.profile.social_accounts }}
+        <ul class="footer-social">
+          {{ with $footerSocial.facebook }}
+          <li><a href="{{ . }}" target="_blank" title="Facebook" {{ if $.Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:white"{{end}}>Facebook</a></li>
+          {{end}}
+
+          {{ with $footerSocial.instagram }}
+          <li><a href="{{ . }}" target="_blank" title="Instagram" {{ if $.Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:white"{{end}}>Instagram</a></li>
+          {{end}}
+
+          {{ with $footerSocial.yelp }}
+          <li><a href="{{ . }}" target="_blank" title="Yelp" {{ if $.Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:white"{{end}}>Yelp</a></li>
+          {{end}}
+
+          {{ with $footerSocial.linkedin }}
+          <li><a href="{{ . }}" target="_blank" title="Linkedin" {{ if $.Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:white"{{end}}>Linkedin</a></li>
+          {{end}}
+
+          {{ with $footerSocial.pinterest }}
+          <li><a href="{{ . }}" target="_blank" title="Pinterest" {{ if $.Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:white"{{end}}>Pinterest</a></li>
+          {{end}}
+
+          {{ with $footerSocial.twitter }}
+          <li><a href="{{ . }}" target="_blank" title="Twitter" {{ if $.Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:white"{{end}}>Twitter</a></li>
+          {{end}}
+
+          {{ with $footerSocial.youtube }}
+          <li><a href="{{ . }}" target="_blank" title="Youtube" {{ if $.Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:white"{{end}}>Youtube</a></li>
+          {{end}}
+        </ul>
+         </div>
+         <div class="column">
+          <h2 class="subtitle is-6" {{ if .Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:white"{{end}}>Quick Links</h2>
+          <ul>
+            <li><a href="/products" {{ if .Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:white"{{end}}>Shop</a></li>
+            <li><a href="/faq" {{ if .Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:white"{{end}}>FAQ</a></li>
+            <li><a href="/feedback" {{ if .Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:white"{{end}}>Feedback</a></li>
+            <li><a href="/contact" {{ if .Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:white"{{end}}>Contact</a></li>
+          </ul>
+         </div>
+         <div class="column">
+          <h2 class="subtitle is-6" {{ if .Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:white"{{end}}>Join the Family</h2>
+          <!-- Begin Mailchimp Signup Form -->
+
+<div>
+<form action="https://corwinkcosmetics.us17.list-manage.com/subscribe/post?u=51dac709eaaf4cafbd4283218&amp;id=7983c32e10" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+
+<div class="mc-field-group">
+<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
+</div>
+<div id="mce-responses" class="clear">
+<div class="response" id="mce-error-response" style="display:none"></div>
+<div class="response" id="mce-success-response" style="display:none"></div>
+</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_51dac709eaaf4cafbd4283218_7983c32e10" tabindex="-1" value=""></div>
+    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+    </div>
+</form>
+</div>
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<!--End mc_embed_signup-->
+         </div>
+       </div>
+     </div>
+   </div>
+   <div class="container">
+    <hr style="background:#2c2c2c;height:1px">
+    <div class="columns">
+        <div class="column has-text-centered-mobile">
+            <div class="bottom-credit">
+                <small>&copy; Copyright {{ dateFormat "2006" now }}, {{ .Site.Data.profile.company_name }}</small> &middot; <a href="https://hungryram.com" target="_blank">Website Developed by Hungry Ram</a>
+              </div>
+        </div>
+        <div class="column has-text-right has-text-centered-mobile">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="/shipping-and-cancellation">Shipping and Cancellations</a></li>
+                    <li><a href="/returns-exchanges">Returns and Exchanges</a></li>
+                    <li><a href="/accessibility">Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</footer>
+<div id="snipcart" data-api-key="Yjk5Y2Y0MjUtZDc1Yy00MTA0LWFiOWYtMWQyNDZhOTA0NTRjNjM3MzA0NzQwMTA0MzQyOTA0" hidden></div>
+<script src="https://cdn.snipcart.com/themes/v3.0.17/default/snipcart.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+<script src="{{.Site.BaseURL}}/js/main.js"></script>
+{{/*  <script>
+  var i = 1;
+  $('.simple-drop').each(function(){
+      $(this).addClass('dropdown'+i++);
+  });
+</script>  */}}
+
+<script>
+
+    $(document).ready(function() {
+    
+    // Check for click events on the navbar burger icon
+        $(".navbar-burger").click(function() {
+        
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            $(".navbar-burger").toggleClass("is-active");
+            $(".navbar-menu").toggleClass("is-active");
+        
+        });
+
+        $('.sub-menu').click(function(){
+        $('.sub', this).toggleClass('sub-active-menu');
+         });
+    });
+
+    $( function() {
+      $( "#accordion" ).accordion({
+        active: false,
+        collapsible: true,
+      });
+    });
+    </script>
+    <script>
+
+      $('.product-slide').slick({
+      infinite: true,
+      dots: true,
+      adaptiveHeight: true,
+      speed: 1000,
+      });
+
+    </script>
+    <script>
+      $('.other-products').slick({
+        dots: true,
+        infinite: false,
+        speed: 1000,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ]
+      });
+    </script>
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+      </script>
+    <script type="text/javascript">
+      var _userway_config = {
+        /* uncomment the following line to override default position*/
+        /* position: '3', */
+        /* uncomment the following line to override default size (values: small, large)*/
+         size: 'small',
+        /* uncomment the following line to override default language (e.g., fr, de, es, he, nl, etc.)*/
+        /* language: 'null', */
+        /* uncomment the following line to override color set via widget (e.g., #053f67)*/
+        /* color: '#2d68ff', */
+        /* uncomment the following line to override type set via widget (1=person, 2=chair, 3=eye, 4=text)*/
+        /* type: '1', */
+        /* uncomment the following lines to override the accessibility statement*/
+        /* statement_text: "Our Accessibility Statement", */
+        /* statement_url: "http://www.example.com/accessibility", */
+        /* uncomment the following line to override support on mobile devices*/
+        /* mobile: true, */
+        account: 'WbotOwPehx'
+      };
+    </script>
+    <script type="text/javascript" src="https://cdn.userway.org/widget.js"></script>
+</body>
+</html>

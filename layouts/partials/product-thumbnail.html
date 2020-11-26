@@ -1,0 +1,43 @@
+<div class="thumbnail__product">
+    <a href="{{ .Permalink }}">
+        <div class="thumbnail__container">
+            <div class="thumbnail__image" style="background:url({{ with .Params.gallery }}{{ index . 0 }}{{ end }}) no-repeat center;background-size:cover;">{{ if .Params.on_sale }}<span class="sale-tag">Sale</span>{{ end }}</div>
+        </div>
+    </a>
+    <div class="columns is-desktop thumbnail__details mb-1 pb-1">
+        <div class="column is-8">
+            <div class="product__title has-text-left-desktop has-text-centered-mobile">
+                <h1 class="title is-6">{{ .Title }}</h1>
+                <p></p>
+                <p>{{ range index .Params "lash-types" }}{{ . }} {{ end }}</p>
+                <p>{{ range index .Params "lash-materials" }}{{ . }} {{ end }}</p>
+                <p>{{ range .Params.eyeliners }}{{ . }} {{ end }}</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="product__price">
+                <h1 class="title is-6 has-text-centered-mobile has-text-right-desktop">{{ if .Params.on_sale }} <span class="sale-price">${{ lang.NumFmt 2 .Params.price }} </span>${{ lang.NumFmt 2 .Params.sale_price }}{{ else }}${{ lang.NumFmt 2 .Params.price }}{{ end }}</h1>
+            </div>
+        </div>
+    </div>
+    <div class="columns has-text-centered">
+        <div class="column">
+            <div class="add__cart__list pb-5 pt-5">
+                <button class="snipcart-add-item"
+                data-item-id="{{ .Params.sku }}"
+                data-item-price="{{ if .Params.on_sale }}{{ lang.NumFmt 2 .Params.sale_price }}{{ else }}{{ lang.NumFmt 2 .Params.price }}{{  end}}"
+                data-item-url="{{ .RelPermalink }}"
+                data-item-image="{{ with .Params.gallery }}{{ index . 0 }}{{ end }}"
+                data-item-name="{{ .Title }}"
+                {{ with .Params.customOptions }}
+                {{- range $index, $option := . -}}
+                {{ safeHTMLAttr (partial (printf "custom-options/%s" .template) (dict "Index" (add 1 $index) "Option" $option)) }}
+                {{- end -}}
+            {{ end }}
+                >
+                + Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+</div>   

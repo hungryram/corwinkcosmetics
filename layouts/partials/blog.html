@@ -1,0 +1,22 @@
+{{ $blogSec := .Site.Data.design.home_section_text.blog }}
+
+<div class="section mt-6">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-half is-offset-one-quarter has-text-centered">
+                <div class="product-title">
+                    <h2 class="title is-4">{{ $blogSec.subtitle }}</h2>
+                    <h2 class="title is-2">{{ $blogSec.heading }}</h2>
+                    <p>{{ $blogSec.body_text }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="responsive-slide">
+            {{ range first 6 (where $.Site.RegularPages "Type" "blog") }}
+            <div class="column">
+                {{ partial "blog-thumbnail.html" . }}
+            </div>
+            {{end}}
+        </div>
+    </div>
+</div>

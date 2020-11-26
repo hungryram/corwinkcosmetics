@@ -1,0 +1,88 @@
+---
+label: Page Config
+hide_body: true
+fields:
+- name: product_page
+  type: field_group
+  config: {}
+  fields:
+  - name: heading
+    type: text
+    config:
+      required: false
+    label: Heading
+  - name: body_text
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Body Text
+  - name: seo
+    type: include
+    config: {}
+    template: seo
+    label: SEO
+  label: Product Page
+- name: faq_page
+  type: field_group
+  config: {}
+  fields:
+  - name: seo
+    type: include
+    config: {}
+    template: seo
+    label: SEO
+  label: FAQ Page
+- name: contact_page
+  type: field_group
+  config: {}
+  fields:
+  - name: heading
+    type: text
+    config:
+      required: false
+    label: Heading
+  - name: body_text
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Body Text
+  - name: seo
+    type: include
+    config: {}
+    template: seo
+    label: SEO
+  label: Contact Page
+- name: blog_page
+  type: field_group
+  config: {}
+  fields:
+  - name: heading
+    type: text
+    config:
+      required: false
+    label: Heading
+  - name: body_text
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Body Text
+  - name: seo
+    type: include
+    config: {}
+    template: seo
+    label: SEO
+  label: Blog Page
+pages:
+- data/pageconfig.yaml

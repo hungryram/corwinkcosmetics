@@ -1,0 +1,77 @@
+<!-- Hero head: will stick at the top -->
+<div class="top-bar">
+    <div class="container has-text-centered">
+      <p>{{ if .Site.Data.profile.primary_contact.email }}<a href="mailto:{{ .Site.Data.profile.primary_contact.email }}" {{ if $.Site.Data.design.colors.top_bar_enable_black_text_color }}style="color: black"{{ else }}style="color: #fff"{{end}}>{{ .Site.Data.profile.primary_contact.email }}</a>{{ end }}
+        {{ if .Site.Data.profile.primary_contact.mobile_phone }}<a href="tel:{{ .Site.Data.profile.primary_contact.mobile_phone }}" {{ if $.Site.Data.design.colors.top_bar_enable_black_text_color }}style="color: black"{{ else }}style="color: #fff"{{end}}>{{ .Site.Data.profile.primary_contact.mobile_phone }}</a>{{ end }}
+      </p>    </div>
+  </div>
+  <div class="branding">
+      <div class="container has-text-centered">
+        <div class="columns is-vcentered is-mobile">
+          <div class="column">
+            <a href="" class="snipcart-customer-signin has-text-black" style="display:flex;align-items:center;justify-content:center">Account</a>
+
+          </div>
+          <div class="column">
+            <a class="navbar-item has-text-centered" href="{{ .Site.BaseURL }}">
+              {{ with .Site.Data.design.logo_and_title.logo}}
+          <img src="{{ . }}" alt="{{ $.Site.Data.profile.company_name }}" style="margin: 0 auto">
+              {{ else }}
+          <h1>{{ .Site.Data.design.logo_and_title.company_title }}</h1>
+              {{ end }}
+        </a>
+          </div>
+          <div class="column">
+            <a href="" class="snipcart-checkout has-text-black" style="display:flex;align-items:center;justify-content:center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler icon-tabler-shopping-cart" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <circle cx="9" cy="19" r="2" />
+                <circle cx="17" cy="19" r="2" />
+                <path d="M3 3h2l2 12a3 3 0 0 0 3 2h7a3 3 0 0 0 3 -2l1 -7h-15.2" />
+              </svg>
+              <span class="snipcart-items-count ml-3 has-text-black"></span> / <span class="snipcart-total-price"></span>
+            </a>
+           </div>
+        </div>
+      </div>
+  </div>
+    <div class="hero-head">
+    
+      <nav class="navbar is-transparent">
+        <div class="container">
+          <div class="navbar-brand">
+            <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenuHeroA" class="navbar-menu">
+            <div class="navbar-end">
+          {{ $currentPage := . }}
+          {{ range .Site.Menus.main }}
+          {{ if .HasChildren }}
+              <div class="navbar-item has-dropdown is-hoverable main-drop">
+                  <a class="navbar-link" href="javascript:;">
+                      {{ .Name }}
+                  </a>
+                  <!-- First Level Dropdown -->
+                      <div class="navbar-dropdown">
+                          {{ range .Children }}
+                              
+                              <a class="navbar-item {{ if .HasChildren }}navbar-link first-drop is-hoverable{{ end }}" href="{{ if .HasChildren }}javascript:;{{ else }}{{ .URL }}{{ end }}">
+                              {{ .Name }}
+                              </a>
+                          
+                          {{ end }}
+                    </div>
+                    <!-- End first level Dropdown -->
+              </div>
+              {{ else }} <!-- Else No Drop Down-->
+              <a href="{{ .URL |absURL }}" class="navbar-item">{{ .Name }}</a>
+          {{ end }}
+          {{ end }} <!-- End range menu -->
+      </div>
+        </div>
+      </nav>
+    </div>

@@ -1,0 +1,16 @@
+{{ $SecondSec := .Site.Data.design.home_section_text.second_intro }}
+<div class="banner__section" style="background:url({{ .Site.Data.design.banner.banner_image }});background-size:cover;background-position:center">
+    <div class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-6">
+                    <div class="content has-text-white">
+                    <h2 class="title is-4 has-text-white">{{ $SecondSec.subtitle }}</h2>
+                        <h2 class="title is-2 has-text-white">{{ $SecondSec.heading }}</h2>
+                        <p class="content">{{ $SecondSec.body_text | markdownify }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
