@@ -13,7 +13,7 @@
     <div class="columns is-multiline">
         {{ range $featured.featured }}
         <div class="column is-3 ">
-        <a href="{{ .Permalink }}">
+        <a href="{{ .link }}">
             <div class="featured" style="background:linear-gradient(rgba(174, 153, 222,0.4),rgba(174, 153, 222,0.4)),url({{ .image }}) no-repeat center;background-size:cover;padding:100px 20px;">
                 <h2 class="title is-4 has-text-centered has-text-white">{{ .heading }}</h2>
             </div>
