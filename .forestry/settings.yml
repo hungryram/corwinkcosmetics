@@ -12,6 +12,10 @@ sections:
 - type: heading
   label: My Website
 - type: document
+  path: data/homedesign.yaml
+  label: Home Design
+  match: "**/*"
+- type: document
   path: data/design.yaml
   label: Design
 - type: document
