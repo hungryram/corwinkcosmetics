@@ -1,0 +1,24 @@
+{{ $featured := .Site.Data.homedesign.featured }}
+<div class="section">
+    <div class="columns">
+        <div class="column content">
+            {{ if .Params.heading }}
+                <h1 class="title is-4">{{ .Params.heading }}</h1>
+            {{ end }}
+            {{ if .Params.body }}
+            <p>{{ .Params.body | markdownify }}</p>
+        {{ end }}
+        </div>
+    </div>
+    <div class="columns is-multiline">
+        {{ range $featured.featured }}
+        <div class="column is-3 ">
+        <a href="{{ .Permalink }}">
+            <div class="featured" style="background:linear-gradient(rgba(174, 153, 222,0.4),rgba(174, 153, 222,0.4)),url({{ .image }}) no-repeat center;background-size:cover;padding:100px 20px;">
+                <h2 class="title is-4 has-text-centered has-text-white">{{ .heading }}</h2>
+            </div>
+        </a>
+        </div>
+        {{ end }}
+    </div>
+</div>

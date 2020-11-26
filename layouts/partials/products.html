@@ -2,7 +2,7 @@
 
 <div class="section mt-6">
     <div class="container">
-        <div class="columns">
+        {{/*  <div class="columns">
             <div class="column is-half is-offset-one-quarter has-text-centered">
                 <div class="product-title">
                     <h2 class="title is-4">{{ $firstSec.subtitle }}</h2>
@@ -10,7 +10,7 @@
                     <p class="content">{{ $firstSec.body_text | markdownify }}</p>
                 </div>
             </div>
-        </div>
+        </div>  */}}
         <div class="responsive-slide">
             {{ range first 6 (where $.Site.RegularPages "Type" "products") }}
             <div class="column">
