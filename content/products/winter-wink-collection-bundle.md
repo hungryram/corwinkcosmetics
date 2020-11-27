@@ -24,6 +24,10 @@ meta_description = ""
 title_tag = ""
 
 +++
+* Glue Not Included
+
+This is a _Seasonal Lash_ Collection & is here for a **Limited Time ONLY!**
+
 Want the ENTIRE COLLECTION?! 😍
 
 Grab your favorite holiday lash collection for a great deal! 🎄
