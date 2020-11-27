@@ -26,4 +26,12 @@ title_tag = ""
 +++
 Want the ENTIRE COLLECTION?! 😍
 
-Grab your favorite holiday collection for a great deal! You'll definitely be lookin' snatched for the holidays 😉❄️
+Grab your favorite holiday lash collection for a great deal! 🎄
+
+Our Winter Wink Collection Includes...
+
+* Mr. Grinch
+* Rudolph
+* Snowflake
+
+  You'll definitely be lookin' snatched for the holidays 😉❄️
