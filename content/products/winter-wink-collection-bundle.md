@@ -17,7 +17,7 @@ band = "Handcrafted Flexible Plastic Band"
 lash_height = "Mix"
 length = "Mix"
 material = "Mix"
-pre-order = true
+pre-order = false
 vegan = false
 [search_engine_optimization]
 meta_description = ""
