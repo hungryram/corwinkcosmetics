@@ -2,23 +2,23 @@
 collections = ["Seasonal Winter Wink Collection"]
 customOptions = []
 eyeliners = []
-gallery = ["/uploads/img_1455.jpeg", "/uploads/img_1465-copy.jpg", "/uploads/img_1433.jpeg", "/uploads/img_1438.jpeg", "/uploads/img_1443.jpeg"]
+gallery = ["/uploads/c86955a5-63d1-4941-9d2d-220e04c4e612.jpeg", "/uploads/a6b7e661-7b95-4381-b2d7-d89e4d43e21d_1_201_a.jpeg", "/uploads/bfa494d7-9974-4786-8b9a-f73ceac4f50b_1_105_c.jpeg"]
 lash-materials = ["Real Siberian Mink"]
 lash-types = ["Colored Lashes", "Strip Lashes"]
 on_sale = true
 price = 14.99
 sale_price = 10.49
-sku = "025"
-title = "Mr. Grinch"
+sku = "027"
+title = "Snowflake (Pre-Order)"
 url = ""
-weight = 25
+weight = 27
 [details]
-band = "Handcrafted Clear Flexible Plastic Band"
-lash_height = "18MM"
-length = "3.5cm"
+band = "Handcrafted Flexible Plastic Band"
+lash_height = ""
+length = ""
 material = "Real Siberian Mink"
-pre-order = false
-vegan = true
+pre-order = true
+vegan = false
 [search_engine_optimization]
 meta_description = ""
 title_tag = ""
@@ -28,9 +28,9 @@ title_tag = ""
 
 This is a _Seasonal Lash_ and is here for a **Limited Time ONLY!**
 
-You can't steal Christmas without Mr. Grinch 😉
+As delicate as a Snowflakes ❄️ 
 
-Our **Mr. Grinch** lash is made from **100% Real Siberian Mink, Cruelty Free** of course. Its beautiful **wispy** & **medium dramatic** style adds a soft flare to your look.
+Our **Snowflake** lash is made from **100% Real Siberian Mink, Cruelty Free** of course. Its beautiful **fluffy** & **medium dramatic** style adds a soft flare to your look.
 
 This lash has a **Doll Look effect** which gives the illusion of wider eyes. You will look more awake with this lash especially because they have a **soft**, **light**, and **fluffy** appeal.
 
