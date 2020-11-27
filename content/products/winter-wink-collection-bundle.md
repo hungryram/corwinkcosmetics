@@ -9,7 +9,7 @@ on_sale = true
 price = 39.99
 sale_price = 27.99
 sku = "028"
-title = "Winter Wink Collection Bundle (Pre-Order)"
+title = "Winter Wink Collection Bundle"
 url = ""
 weight = 28
 [details]
