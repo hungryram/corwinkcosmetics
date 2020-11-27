@@ -1,7 +1,6 @@
 +++
 collections = ["Seasonal Winter Wink Collection"]
 customOptions = []
-draft = true
 eyeliners = []
 gallery = ["/uploads/img_1465-copy.jpg", "/uploads/img_1438.jpeg", "/uploads/img_1501.jpeg", "/uploads/c86955a5-63d1-4941-9d2d-220e04c4e612.jpeg"]
 lash-materials = ["Real Siberian Mink"]
