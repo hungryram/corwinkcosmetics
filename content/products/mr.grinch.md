@@ -1,5 +1,5 @@
 +++
-collections = []
+collections = ["Seasonal Winter Wink Collection"]
 customOptions = []
 draft = true
 eyeliners = []
