@@ -33,6 +33,6 @@ You can't steal Christmas without Mr. Grinch 😉
 
 Our **Mr. Grinch** lash is made from **100% Real Siberian Mink, Cruelty Free** of course. Its beautiful **wispy** & **medium dramatic** style adds a soft flare to your look.
 
-This lash has a **Doll Look effect** which gives the illusion of a flared lash look. You will feel mysterious yet glamorous with this lash especially because they have a **soft**, **light**, and **wispy** appeal.
+This lash has a **Doll Look effect** which gives the illusion of wider eyes. You will look more awake with this lash especially because they have a **soft**, **light**, and **fluffy** appeal.
 
-**The Cat-Eye look** is great for rounded eyes as the effect of the lash makes the eyes look smaller on the inner corners and wider on the outer corners.
+**The Doll Look** is great for smaller eyes or almond eyes as the effect of the lash makes the eyes look bigger and more open.
