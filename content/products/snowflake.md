@@ -17,7 +17,7 @@ band = "Handcrafted Flexible Plastic Band"
 lash_height = ""
 length = ""
 material = "Real Siberian Mink"
-pre-order = true
+pre-order = false
 vegan = false
 [search_engine_optimization]
 meta_description = ""
