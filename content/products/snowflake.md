@@ -9,7 +9,7 @@ on_sale = true
 price = 14.99
 sale_price = 10.49
 sku = "027"
-title = "Snowflake (Pre-Order)"
+title = "Snowflake"
 url = ""
 weight = 27
 [details]
